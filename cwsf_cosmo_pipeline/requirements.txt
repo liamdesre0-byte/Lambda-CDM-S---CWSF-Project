@@ -1,9 +1,0 @@
-numpy
-scipy
-pandas
-matplotlib
-emcee
-corner
-dynesty
-streamlit
-pyarrow

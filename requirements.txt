@@ -1,9 +1,9 @@
 numpy
-pandas
 scipy
+pandas
 matplotlib
 emcee
 corner
 dynesty
-pyarrow
 streamlit
+pyarrow

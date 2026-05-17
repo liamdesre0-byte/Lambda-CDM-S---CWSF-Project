@@ -1,45 +1,55 @@
-# Lambda-CDM-S---CWSF-Project
-A computational cosmology project for the 2026 CWSF exploring how the accelerated expansion of the universe can be modelled through black hole thermodynamics principles rather than a constant dark energy/cosmological constant.
-## Overview
-Standard ΛCDM successfully explains most observations of the universe but relies on dark energy to explain the accelerated expansion of the universe. However, there have been no direct observational evidence for the physical nature of dark energy.
+# CWSF Cosmology Pipeline
 
-This project (Lambda-CDM+S) explores whether thermodynamic principles inspired by black hole horizon physics can reproduce and explain the late-universe accelerated expansion through entropy growth associated with the universe's Hubble Horizon.
+Modularized research codebase for your CWSF workflow, based on:
+- `cwsf_pipeline.py` (full inference + publication pipeline)
+- `ccomplet2ee.py` (entropy-extended analysis and Streamlit tooling; aligned to your `ccomplet2.py` direction)
+- `nbody_simulations.py` (posterior-driven PM and diagnostic simulation stack; aligned to your `nbody_sims.py` work)
 
-This idea was explored through computational physics by numerically evaluating modified horizon evolution equations derived from the Friedmann Equations and constrains the model's parameters using observational datasets from high-precision telescopes through Monte Carlo and Markov Chain Monte Carlo (MCMC) methods.
-## Key Features
-- Cosmological evolution modelled through solutions to the Friedmann-equations
-- Entropy-driven horizon expansion framework
-- Monte Carlo parameter exploration
-- MCMC posterior inference
-- Observational constraints using:
-  - Pantheon+
-  - DESI
-  - SDSS BAO
-  - SH0ES
-- Residual analysis and statistical validation
-- AIC/BIC complexity analysis
-- Streamlit interactive visualization app
-- ## Repository Structure
+## Project Structure
 
-/models
-    Cosmological evolution models
+```text
+cwsf_cosmo_pipeline/
+├── main.py
+├── cwsf_pipeline.py
+├── ccomplet2ee.py
+├── nbody_simulations.py
+├── data/
+├── models/
+├── simulations/
+├── analysis/
+├── visualization/
+└── app/
+```
 
-/simulations
-    Monte Carlo and MCMC pipelines
+The large single-file scripts are kept as reproducibility baselines, while the new package folders provide cleaner interfaces for GitHub presentation and future maintenance.
 
-/analysis
-    Statistical analysis and residual evaluation
+## Quick Start
 
-/visualization
-    Plot generation and publication figures
+1. Create and activate a virtual environment.
+2. Install dependencies:
 
-/app
-    Interactive Streamlit application
+```bash
+pip install -r requirements.txt
+```
 
-/report
-    Final written report
+3. Run the full orchestrated flow:
 
-/figures
-    Poster and publication figures
+```bash
+python main.py --task all
+```
 
-    
+## Common Tasks
+
+- Run only the core cosmology pipeline:
+  - `python main.py --task pipeline`
+- Run only posterior-driven N-body diagnostics:
+  - `python main.py --task nbody --outdir cwsf_output`
+- Run only ccomplet2ee sensitivity + MC study:
+  - `python main.py --task ee --ee-outdir ee_output --mc-runs 300 --seed 42`
+- Generate publication figures from existing outputs:
+  - `python main.py --task figures --outdir cwsf_output`
+
+## Notes
+
+- Keep `cwsf_pipeline.py`, `ccomplet2ee.py`, and `nbody_simulations.py` in the repository as your reference implementations.
+- Keep outputs (`cwsf_output/`, `ee_output/`) out of version control unless you are intentionally publishing a small, curated artifact set.

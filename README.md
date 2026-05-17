@@ -40,11 +40,8 @@ The central hypothesis explored in this project is:
 Under this framework:
 - the early universe behaves like standard gravity-dominated ΛCDM,
 - while the late universe transitions toward an entropy-driven expansion regime, hence the name of the new proposed model:
-- \[
-\Lambda \mathrm{CDM} + S
-\]
-
-where \(S\) represents the thermodynamic entropy contribution.
+- ΛCDM+S
+where S represents the thermodynamic entropy contribution.
 
 ---
 
@@ -177,27 +174,6 @@ Model parameters were constrained using observational cosmology datasets includi
 ---
 
 # Posterior Predictive Results
-
-The posterior predictive analysis compared:
-
-\[
-\Delta \mu
-=
-\mu_{\Lambda \mathrm{CDM}+S}
--
-\mu_{\Lambda \mathrm{CDM}}
-\]
-
-to observed supernova residual structure.
-
-Representative statistical diagnostics include:
-
-| Diagnostic | Approximate Value |
-|---|---|
-| Posterior Predictive p-value | 0.48 |
-| KS p-value | 0.83 |
-| Correlation \(r\) | 0.91 |
-| Approximate \(R^2\) | 0.92 |
 
 The analysis suggests that:
 - most cosmological parameters remain broadly consistent with ΛCDM,

@@ -1,0 +1,27 @@
+# Python cache/build
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Notebooks and editor
+.ipynb_checkpoints/
+.DS_Store
+
+# Output artifacts
+cwsf_output/
+ee_output/
+_smoke_out/
+cli_clean/
+cli_after_streamlit/
+ee_smoke*/
+_tmp_ext*/

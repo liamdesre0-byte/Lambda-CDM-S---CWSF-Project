@@ -1,0 +1,105 @@
+{
+  "versions": {
+    "python": "3.13.13",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.8",
+    "emcee": "3.1.6",
+    "corner": "2.2.3",
+    "KMS_TO_SI": 3.2408e-20,
+    "seed": 2026,
+    "walkers_burn_prod": [
+      48,
+      400,
+      1200
+    ]
+  },
+  "training": {
+    "n_sn": 1465,
+    "dataset": "Pantheon+ SH0ES (zCMB, diagonal errors)"
+  },
+  "holdout": {
+    "n_sn": 1820,
+    "dataset": "DES Dovekie HD (zHD, diag stat+sys+vpec errors)"
+  },
+  "lcdm": {
+    "param_names": [
+      "H0",
+      "Omega_m",
+      "M"
+    ],
+    "median": {
+      "H0": 72.7611790944105,
+      "Omega_m": 0.35267544704323206,
+      "M": 0.0014502876547488816
+    },
+    "rhat_split_max": 1.000448206311488,
+    "rhat_walkers_max": 1.01588338206881,
+    "tau_integrated_mean": 20.036272849762263,
+    "tau_integrated_max": 20.036272849762263,
+    "ess_robust_approx": 1437.3930828328544,
+    "max_loglike_train": -329.1833236615728,
+    "waic": -1105.0253537830934,
+    "aic": 664.3666473231456,
+    "bic": 680.2354788874991,
+    "chi2_median": 659.7847726931166,
+    "des_median": {
+      "rmse": 0.3054473637188644,
+      "chi2": 2258.805240884654,
+      "bias": 0.15421079152528056
+    },
+    "des_at_maxlike": {
+      "rmse": 0.30946758370767136,
+      "chi2": 2357.0866606221743,
+      "bias": 0.16187461840812817
+    }
+  },
+  "blend": {
+    "param_names": [
+      "H0",
+      "Omega_m",
+      "t_crit",
+      "k",
+      "M"
+    ],
+    "median": {
+      "H0": 81.62490351501019,
+      "Omega_m": 0.05000702056362393,
+      "t_crit": 27.720138816733755,
+      "k": 0.7302675453592098,
+      "M": 14.271638939406607
+    },
+    "rhat_split_max": 1.0108069555307568,
+    "rhat_walkers_max": 1.0398547538611773,
+    "tau_integrated_mean": null,
+    "tau_integrated_max": null,
+    "ess_robust_approx": null,
+    "max_loglike_train": -97014.99094725522,
+    "waic": 192426.7642913286,
+    "aic": 194039.98189451045,
+    "bic": 194066.4299471177,
+    "chi2_median": 194044.27153216169,
+    "des_median": {
+      "rmse": 2.7587379771757337,
+      "chi2": 460644.2347426768,
+      "bias": 2.079822019123069
+    },
+    "des_at_maxlike": {
+      "rmse": 2.759108997368781,
+      "chi2": 460749.7704990197,
+      "bias": 2.080372810688701
+    }
+  },
+  "model_comparison": {
+    "delta_aic_blend_minus_lcdm": 193375.6152471873,
+    "delta_bic_blend_minus_lcdm": 193386.19446823018,
+    "delta_waic_blend_minus_lcdm": 193531.7896451117,
+    "des_rmse_ratio_blend_over_lcdm": 9.031795015637762,
+    "interpretation_rule": "LCDM remains competitive or preferred: either DES RMSE does not improve with the blend, or the AIC/BIC penalty for two extra parameters is substantial."
+  },
+  "paths": {
+    "outdir": "C:\\Users\\josia\\cwsf_cosmo_pipeline\\cwsf_output_run",
+    "figures": "C:\\Users\\josia\\cwsf_cosmo_pipeline\\cwsf_output_run\\figures"
+  }
+}

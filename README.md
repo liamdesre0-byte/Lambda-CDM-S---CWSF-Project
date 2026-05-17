@@ -26,8 +26,8 @@ This project explores whether thermodynamic principles associated with black hol
 Both black holes and the observable universe possess horizons.
 
 Since black hole entropy is proportional to horizon area through the Bekenstein-Hawking relation:
-S ∝ A
-this raises the possibility that the Hubble Horizon of the universe may also obey this relation.
+S ∝ A. 
+This raises the possibility that the Hubble Horizon of the universe may also obey this relation.
 
 The central hypothesis explored in this project is:
 

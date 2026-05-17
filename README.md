@@ -13,7 +13,7 @@ One of the most important discoveries in science is that the universe is expandi
 The current standard cosmological model, known as ΛCDM (Lambda Cold Dark Matter), explains this acceleration using dark energy. However, despite decades of research, the physical nature of dark energy remains unknown.
 
 In recent years, increasingly precise astronomical observations have revealed several tensions within ΛCDM, particularly involving:
-- the Hubble constant \(H_0\),
+- the Hubble constant (H_0),
 - late-universe supernova measurements,
 - and discrepancies between early-universe and late-universe observations.
 
@@ -26,11 +26,7 @@ This project explores whether thermodynamic principles associated with black hol
 Both black holes and the observable universe possess horizons.
 
 Since black hole entropy is proportional to horizon area through the Bekenstein-Hawking relation:
-
-\[
-S \propto A
-\]
-
+S ∝ A
 this raises the possibility that the Hubble Horizon of the universe may also obey this relation.
 
 The central hypothesis explored in this project is:

@@ -1,9 +1,9 @@
 # CWSF Cosmology Pipeline
 
-Modularized research codebase for your CWSF workflow, based on:
-- `cwsf_pipeline.py` (full inference + publication pipeline)
-- `ccomplet2ee.py` (entropy-extended analysis and Streamlit tooling; aligned to your `ccomplet2.py` direction)
-- `nbody_simulations.py` (posterior-driven PM and diagnostic simulation stack; aligned to your `nbody_sims.py` work)
+This repository contains all the computational work used to explore Lambda-CDM+S. In this project, the core physics were defined as solutions to the Friedmann Equations. The parameters involved in the solutions were explored through a Monte Carlo Ensemble, and then constrained through a Markov Chain Monte Carlo using data from Type Ia Supernovae, the Cosmic Microwave Background, Galaxies, and the Baryon Acoustic Oscillations through the Planck, Pantheon+, DESI, DES and SDSS datasets. The codebase is split into several modular components:
+- `cwsf_pipeline.py` (Full Bayesian Inference)
+- `ccomplet2ee.py` (Core physics of the Entropy-driven model and Streamlit interactive modelling)
+- `nbody_simulations.py` (N-Body cosmological simulations based on the posteriors)
 
 ## Project Structure
 
@@ -20,8 +20,6 @@ cwsf_cosmo_pipeline/
 ├── visualization/
 └── app/
 ```
-
-The large single-file scripts are kept as reproducibility baselines, while the new package folders provide cleaner interfaces for GitHub presentation and future maintenance.
 
 ## Quick Start
 
@@ -42,14 +40,9 @@ python main.py --task all
 
 - Run only the core cosmology pipeline:
   - `python main.py --task pipeline`
-- Run only posterior-driven N-body diagnostics:
+- Run only posterior-driven N-body Simulation:
   - `python main.py --task nbody --outdir cwsf_output`
-- Run only ccomplet2ee sensitivity + MC study:
+- Run only ccomplet2ee parameter exploration:
   - `python main.py --task ee --ee-outdir ee_output --mc-runs 300 --seed 42`
-- Generate publication figures from existing outputs:
+- Generate figures from posterior outputs:
   - `python main.py --task figures --outdir cwsf_output`
-
-## Notes
-
-- Keep `cwsf_pipeline.py`, `ccomplet2ee.py`, and `nbody_simulations.py` in the repository as your reference implementations.
-- Keep outputs (`cwsf_output/`, `ee_output/`) out of version control unless you are intentionally publishing a small, curated artifact set.

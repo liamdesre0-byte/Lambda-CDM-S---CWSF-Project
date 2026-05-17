@@ -67,7 +67,6 @@ cwsf_cosmo_pipeline/
 ├── mcplots.py
 ├── nbody_simulations.py
 ├── sigmoid_dataset.py
-├── tune_blend.py
 ├── main.py
 │
 ├── requirements-complete2ee.txt
